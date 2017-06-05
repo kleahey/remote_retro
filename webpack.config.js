@@ -11,8 +11,6 @@ const OUTPUT_PUBLIC_PATH = `http://localhost:${DEV_SERVER_PORT}/`
 
 module.exports = {
   entry: [
-    "./web/static/js/polyfills/array.find",
-    "./web/static/js/polyfills/array.find_index",
     "react-hot-loader/patch",
     `webpack-dev-server/client?${OUTPUT_PUBLIC_PATH}`,
     "webpack/hot/only-dev-server",

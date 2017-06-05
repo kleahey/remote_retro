@@ -2,7 +2,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "webpack -p",
+    "deploy": "webpack -p --config webpack.production.config.js",
     "watch": "webpack --watch-stdin --color --hide-modules",
     "postinstall": "cp -rf node_modules/semantic-ui-css/ priv/static/css/semantic-ui/"
   },
