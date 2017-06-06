@@ -66,7 +66,7 @@ module.exports = {
       }),
     }]
   },
-  devtool: "cheap-module-eval-source-map",
+  devtool: "eval",
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new WebpackNotifierPlugin({ skipFirstNotification: true }),
