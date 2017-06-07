@@ -10,9 +10,11 @@ import RemoteRetro from "./components/remote_retro"
 import RetroChannel from "./services/retro_channel"
 import rootReducer from "./reducers"
 
-const userToken = window.userToken
+import enableHotCssModuleUpdates from "./dev/enable_hot_css_module_updates"
 
-const retroChannelConfiguration = { userToken, retroUUID: window.retroUUID }
+const { userToken, retroUUID } = window
+
+const retroChannelConfiguration = { userToken, retroUUID }
 const retroChannel = RetroChannel.configure(retroChannelConfiguration)
 const reactRoot = document.querySelector(".react-root")
 
@@ -33,4 +35,6 @@ if (module.hot) {
   module.hot.accept("./components/remote_retro", () => {
     renderWithHotReload(RemoteRetro)
   })
+
+  enableHotCssModuleUpdates()
 }
